@@ -28,9 +28,9 @@ def create_component(data, component_name, height=None, width=None, scrolling=Fa
 
     # Replace the templates with the specified data
     for key in data:
-        data_placeholder = "{{" + key + "}}"
+        data_placeholder = "{{" + str(key) + "}}"
         component_html = component_html.replace(
-            data_placeholder, safe_string(data[key]))
+            data_placeholder, safe_string(str(data[key])))
 
     # Have streamlit render the component
     components.html(component_html, width, height, scrolling)
