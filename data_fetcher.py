@@ -1,8 +1,6 @@
 #############################################################################
 # data_fetcher.py
 #
-# Created for TechExchange 2025, Software Development Studio with Google
-#
 # This file contains functions to fetch data needed for the app.
 #
 # You will re-write these functions in Unit 3, and are welcome to alter the

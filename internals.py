@@ -1,8 +1,6 @@
 #############################################################################
 # internals.py
 #
-# Created for TechExchange 2025, Software Development Studio with Google
-#
 # This file contains internals for component templating. You do not need
 # to understand this file, but are welcome to read through it if you want.
 #

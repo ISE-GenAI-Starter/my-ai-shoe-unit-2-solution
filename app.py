@@ -1,8 +1,6 @@
 #############################################################################
 # app.py
 #
-# Created for TechExchange 2025, Software Development Studio with Google
-#
 # This file contains the entrypoint for the app.
 #
 #############################################################################

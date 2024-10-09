@@ -1,8 +1,6 @@
 #############################################################################
 # modules.py
 #
-# Created for TechExchange 2025, Software Development Studio with Google
-#
 # This file contains modules that may be used throughout the app.
 #
 # You will write these in Unit 2. Do not change the names or inputs of any
