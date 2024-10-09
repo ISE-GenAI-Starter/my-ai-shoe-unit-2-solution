@@ -14,11 +14,23 @@ userId = 'user1'
 
 def display_app_page():
     """Displays the home page of the app."""
-    st.title('Welcome to SDS!')
+    advice = get_genai_advice(userId)
+    display_genai_advice(advice['timestamp'], advice['content'], advice['image'])
 
-    # An example of displaying a custom component called "my_custom_component"
-    value = st.text_input('Enter your name')
-    display_my_custom_component(value)
+    st.title("Workouts")
+    workouts = get_user_workouts(userId)
+    display_activity_summary(workouts)
+    display_recent_workouts(workouts)
+
+    st.title("Friend posts!")
+    friends = get_user_profile(userId)['friends']
+    posts = []
+    for friendId in friends:
+        posts.extend(get_user_posts(friendId))
+    for post in posts:
+        user = get_user_profile(post['user_id'])
+        display_post(user['username'], user['profile_image'],
+                     post['timestamp'], post['content'], post['image'])
 
 
 # This is the starting point for your app. You do not need to change these lines

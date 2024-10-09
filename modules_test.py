@@ -6,11 +6,18 @@
 # You will write these tests in Unit 2.
 #############################################################################
 
-import unittest
 from streamlit.testing.v1 import AppTest
+import unittest
 from modules import display_post, display_activity_summary, display_genai_advice, display_recent_workouts
 
-# Write your tests below
+app = AppTest.from_file("app.py")
+app.run()
+assert not app.exception
+
+# Write the tests below
+# TODO(Nyah): POST do image urls display? is it okay if there's no image?
+# Calling it multiple times with different args doesn't change the previous one
+# All data is displayed
 
 class TestDisplayPost(unittest.TestCase):
     """Tests the display_post function."""

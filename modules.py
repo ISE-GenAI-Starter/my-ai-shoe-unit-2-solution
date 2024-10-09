@@ -31,19 +31,46 @@ def display_my_custom_component(value):
 
 def display_post(username, user_image, timestamp, content, post_image):
     """Write a good docstring here."""
-    pass
+    data = {
+        'USER_IMG': user_image,
+        'USERNAME': username,
+        'TIMESTAMP': timestamp,
+        'CONTENT': content,
+        'POST_IMG': post_image
+    }
+    create_component(data, "soln_post")
 
 
 def display_activity_summary(workouts_list):
     """Write a good docstring here."""
-    pass
+    steps = 0
+    calories = 0
+    for workout in workouts_list:
+        # IF workout is today
+        steps += workout['steps']
+        calories += workout['calories_burned']
+    data = {
+        'STEPS': steps,
+        'CALORIES': calories,
+    }
+    create_component(data, "soln_activity_summary")
 
 
 def display_recent_workouts(workouts_list):
     """Write a good docstring here."""
-    pass
+    steps = 0
+    calories = 0
+    for workout in workouts_list:
+        steps += workout['steps']
+        calories += workout['calories_burned']
+    data = {
+        'TOTAL_WORKOUTS': len(workouts_list),
+        'AVG_STEPS': float(steps) / len(workouts_list),
+        'AVG_CALORIES': float(calories) / len(workouts_list),
+    }
+    create_component(data, "soln_recent_workouts")
 
 
 def display_genai_advice(timestamp, content, image):
     """Write a good docstring here."""
-    pass
+    display_post("Friendly Bot", "", timestamp, content, image)
