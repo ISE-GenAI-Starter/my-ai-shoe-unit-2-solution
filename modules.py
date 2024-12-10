@@ -38,7 +38,7 @@ def display_post(username, user_image, timestamp, content, post_image):
         'CONTENT': content,
         'POST_IMG': post_image
     }
-    create_component(data, "soln_post")
+    create_component(data, "post")
 
 
 def display_activity_summary(workouts_list):
@@ -53,7 +53,7 @@ def display_activity_summary(workouts_list):
         'STEPS': steps,
         'CALORIES': calories,
     }
-    create_component(data, "soln_activity_summary")
+    create_component(data, "activity_summary")
 
 
 def display_recent_workouts(workouts_list):
@@ -68,7 +68,7 @@ def display_recent_workouts(workouts_list):
         'AVG_STEPS': float(steps) / len(workouts_list),
         'AVG_CALORIES': float(calories) / len(workouts_list),
     }
-    create_component(data, "soln_recent_workouts")
+    create_component(data, "recent_workouts")
 
 
 def display_genai_advice(timestamp, content, image):
